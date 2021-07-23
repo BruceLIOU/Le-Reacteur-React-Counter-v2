@@ -24,22 +24,11 @@ const App = () => {
           Add counter
         </div>
         <div className="line">
-          {addCounter.length === 1 && (
-            <Counter counter={counter} setCounter={setCounter} />
-          )}
-          {addCounter.length === 2 && (
-            <>
-              <Counter counter={counter} setCounter={setCounter} />
-              <Counter counter={counter} setCounter2={setCounter} />
-            </>
-          )}
-          {addCounter.length === 3 && (
-            <>
-              <Counter counter={counter} setCounter={setCounter} />
-              <Counter counter={counter} setCounter={setCounter} />
-              <Counter counter={counter} setCounter={setCounter} />
-            </>
-          )}
+          {addCounter.slice(0, 3).map((counter, index) => {
+            return (
+              <Counter key={index} counter={counter} setCounter={setCounter} />
+            );
+          })}
         </div>
       </div>
 
