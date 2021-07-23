@@ -16,7 +16,7 @@ const App = () => {
           className="add-counter"
           onClick={() => {
             const newCounter = [...counters];
-            newCounter.push(1);
+            newCounter.push(0);
             setCounter(newCounter);
           }}
         >
@@ -25,7 +25,11 @@ const App = () => {
         <div className="line">
           {counters.map((counter, index) => {
             return (
-              <Counter key={index} counters={index} setCounter={setCounter} />
+              <Counter
+                key={index}
+                counters={counters}
+                setCounter={setCounter}
+              />
             );
           })}
         </div>

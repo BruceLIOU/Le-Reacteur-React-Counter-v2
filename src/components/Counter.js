@@ -1,4 +1,5 @@
-const Counter = ({ counters, setCounter }) => {
+const Counter = ({ counters, setCounter, index }) => {
+  console.log({ index });
   return (
     <div className="column">
       <div className="counter">
