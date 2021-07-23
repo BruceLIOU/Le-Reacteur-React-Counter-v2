@@ -7,7 +7,7 @@ import Counter from "./components/Counter";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [counter, setCounter] = useState([0]);
+  const [counter, setCounter] = useState([2, 3, 6]);
   return (
     <div className="App">
       <Header />
@@ -16,7 +16,7 @@ const App = () => {
           className="add-counter"
           onClick={() => {
             const newCounter = [...counter];
-            newCounter.push(counter + 1);
+            newCounter.push(0);
             setCounter(newCounter);
           }}
         >
