@@ -7,7 +7,7 @@ import Counter from "./components/Counter";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [counter, setCounter] = useState([2, 3, 6]);
+  const [counters, setCounter] = useState([2, 3, 6]);
   return (
     <div className="App">
       <Header />
@@ -15,17 +15,17 @@ const App = () => {
         <div
           className="add-counter"
           onClick={() => {
-            const newCounter = [...counter];
-            newCounter.push(0);
+            const newCounter = [...counters];
+            newCounter.push(1);
             setCounter(newCounter);
           }}
         >
           Add counter
         </div>
         <div className="line">
-          {counter.slice(0, 3).map((counter, index) => {
+          {counters.map((counter, index) => {
             return (
-              <Counter key={index} counter={counter} setCounter={setCounter} />
+              <Counter key={index} counters={index} setCounter={setCounter} />
             );
           })}
         </div>

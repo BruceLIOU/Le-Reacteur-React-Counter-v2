@@ -1,11 +1,11 @@
-const Counter = ({ counter, setCounter }) => {
+const Counter = ({ counters, setCounter }) => {
   return (
     <div className="column">
       <div className="counter">
         <div
-          className={`less ${counter === 0 ? "hidden" : ""}`}
+          className={`less ${counters === 0 ? "hidden" : ""}`}
           onClick={() => {
-            setCounter(counter - 1);
+            setCounter(counters - 1);
           }}
         >
           <svg
@@ -21,11 +21,11 @@ const Counter = ({ counter, setCounter }) => {
             />
           </svg>
         </div>
-        <div className="result">{counter}</div>
+        <div className="result">{counters}</div>
         <div
-          className={`more ${counter === 10 ? "hidden" : ""}`}
+          className={`more ${counters === 10 ? "hidden" : ""}`}
           onClick={() => {
-            setCounter(counter + 1);
+            setCounter(counters + 1);
           }}
         >
           <svg
