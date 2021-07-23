@@ -31,7 +31,7 @@ header span {
   justify-content: center;
   margin-top: 40px;
   flex-direction: column;
-  color: #fff;
+/*   color: #fff; */
 }
 
 .add-counter {

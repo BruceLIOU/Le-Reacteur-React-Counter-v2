@@ -1,12 +1,13 @@
-const Counter = ({ counters, setCounter, index }) => {
-  console.log({ index });
+const Counter = ({ counters, setCounter, item, index }) => {
   return (
     <div className="column">
       <div className="counter">
         <div
           className={`less ${counters === 0 ? "hidden" : ""}`}
           onClick={() => {
-            setCounter(counters - 1);
+            const copyOfCounters = [...counters];
+            copyOfCounters[index]--;
+            setCounter(copyOfCounters);
           }}
         >
           <svg
@@ -22,11 +23,21 @@ const Counter = ({ counters, setCounter, index }) => {
             />
           </svg>
         </div>
-        <div className="result">{counters}</div>
+        <div
+          className="result"
+          onClick={() => {
+            const copyOfCounters = [...counters];
+            console.log(copyOfCounters);
+          }}
+        >
+          {counters}
+        </div>
         <div
           className={`more ${counters === 10 ? "hidden" : ""}`}
           onClick={() => {
-            setCounter(counters + 1);
+            const copyOfCounters = [...counters];
+            copyOfCounters[index]++;
+            setCounter(item);
           }}
         >
           <svg
@@ -46,7 +57,9 @@ const Counter = ({ counters, setCounter, index }) => {
       <div
         className="reset"
         onClick={() => {
-          setCounter(0);
+          const copyOfCounters = [...counters];
+          copyOfCounters[index] = 0;
+          setCounter(copyOfCounters);
         }}
       >
         <span>Reset</span>
