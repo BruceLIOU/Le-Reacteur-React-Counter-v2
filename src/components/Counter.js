@@ -23,7 +23,7 @@ const Counter = ({ counters, setCounters, item, index }) => {
             />
           </svg>
         </div>
-        <div className="result">{counters[index]}</div>
+        <div className="result">{item}</div>
         <div
           className={`more ${counters[index] === 10 ? "hidden" : ""}`}
           onClick={() => {
