@@ -31,7 +31,7 @@ header span {
   justify-content: center;
   margin-top: 40px;
   flex-direction: column;
-/*   color: #fff; */
+  color: #fff;
 }
 
 .add-counter {
@@ -44,6 +44,7 @@ header span {
   border-radius: 12px;
   margin-bottom: 60px;
   cursor: pointer;
+  font-size: 32px;
 }
 
 .line {
@@ -101,6 +102,7 @@ header span {
   margin-top: 20px;
   cursor: pointer;
   margin-left: 74px;
+  font-size: 32px;
 }
 
 footer{
